@@ -13,10 +13,10 @@ const Button = ({ type, name, children, onClick, choiseStyle }) => (
 );
 
 Button.propTypes = {
-    name: PropTypes.string.isRequired,
     type: PropTypes.string,
+    name: PropTypes.string.isRequired,
     children: PropTypes.string.isRequired,
-    handleClickButton: PropTypes.func,
+    onClick: PropTypes.func,
     choiseStyle: PropTypes.string,
 };
 
