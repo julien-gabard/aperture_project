@@ -1,0 +1,30 @@
+@import 'styles/_vars';
+
+.footer {
+    background-color: $prussianBlueColor;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+
+    .footer-copy {
+        color: $celadonBlueColor;
+    }
+
+    .footer-nav {
+
+        .footer-nav-link {
+            text-decoration: none;
+            color: $powerBlueColor;
+            margin-left: 2rem;
+
+            &.selected {
+                color: $celadonBlueColor;
+            }
+
+            &:hover {
+                color: $celadonBlueColor;
+            }
+        }
+    }
+}

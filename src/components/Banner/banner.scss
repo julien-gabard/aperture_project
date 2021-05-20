@@ -1,0 +1,19 @@
+@import 'styles/_vars';
+
+.banner {
+    text-align: center;
+    padding: 1.003rem 0;
+    background: radial-gradient(circle , $prussianBlueColor 30%, $darkGreyColor 70%);
+
+    .banner-logo {
+        width: 300px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .banner-content {
+        margin: 0;
+        color: $powerBlueColor;
+        font-size: 1.5rem;
+    }
+}

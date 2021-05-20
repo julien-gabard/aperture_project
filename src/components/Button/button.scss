@@ -1,0 +1,49 @@
+@import 'styles/_vars';
+
+.button {
+    position: relative;
+    border: none;
+    border-radius: 2rem;
+    background: $greyColor;
+    color: $powerBlueColor;
+    box-shadow: inset -6px -6px 9px rgba($lightGreyColor, 0.2), inset 6px 6px 9px rgba($blackColor, 0.4);
+    padding: 1rem 2rem;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+
+    &.option {
+        background: transparent;
+
+        &::after {
+            background: $greyColor;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $celadonBlueColor;
+        border-radius: 2rem;
+        transition: all 200ms ease-in-out;
+        z-index: -1;
+    }
+
+    &:hover {
+
+        &::after {
+            width: 0%;
+        }
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

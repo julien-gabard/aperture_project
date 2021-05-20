@@ -1,0 +1,80 @@
+@import 'styles/_vars';
+
+.articleCard {
+    position: relative;
+    width: 320px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba($blackColor, 0.5);
+    overflow: hidden;
+    margin: 2rem;
+    transition: all 200ms ease-in-out;
+
+    .articleCard-image {
+        height: 200px;
+        background-color: $greyColor;
+
+        .image {
+            width: 100%;
+        }
+    }
+    
+    .articleCard-content {
+        position: absolute;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        background: linear-gradient(45deg, $prussianBlueColor 0%, $celadonBlueColor 80%);
+        box-shadow: 0px -5px 10px rgba($blackColor, 0.5);
+        padding: 1rem;
+        box-sizing: border-box;
+        transition: all 200ms ease-in-out;
+        transition-delay: 200ms;
+
+        .articleCard-content-title {
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .articleCard-content-details {
+            margin: 0;
+            font-size: .8rem;
+
+            .articleCard-content-details-infos {
+                color: $powerBlueColor;
+            }
+        }
+    }
+
+    .articleCard-content-button {
+        position: absolute;
+        left: -25%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: all 200ms ease-in-out;
+    }
+
+    &:hover {
+
+        .articleCard-content {
+            height: 100%;
+            transition-delay: 0ms;
+        }
+
+        .articleCard-content-button {
+            left: 50%;
+            transition-delay: 200ms;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    
+    .articleCard {
+        margin: 2rem 0;
+    }
+}

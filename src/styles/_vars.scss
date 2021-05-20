@@ -1,0 +1,27 @@
+/****************************************
+    Import font familly
+*****************************************/
+@font-face {
+  font-family: 'Quantum';
+  src: url('../assets/fonts/Quantum.otf');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../assets/fonts/Comfortaa.ttf');
+}
+
+/****************************************
+    Variables to use in styles files
+*****************************************/
+$blackColor: #000000;
+$darkGreyColor: #252525;
+$greyColor: #343434;
+$lightGreyColor: #cccccc;
+$whiteColor: #ffffff;
+$imperialRedColor: #E63946;
+$powerBlueColor: #A8DADC;
+$celadonBlueColor: #457B9D;
+$prussianBlueColor: #1D3557;
+$fontQuantum: 'Quantum';
+$fontComfortaa: 'Comfortaa';

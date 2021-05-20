@@ -1,0 +1,15 @@
+@import 'styles/_vars';
+
+.app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .app-main {
+        position: relative;
+        padding-top: 72px;
+        background: linear-gradient(175deg, transparent 80%, $prussianBlueColor 80.1%);
+        display: flex;
+        flex: 1;
+    }
+}

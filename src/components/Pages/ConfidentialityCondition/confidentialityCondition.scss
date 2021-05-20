@@ -1,0 +1,31 @@
+@import 'styles/_vars';
+
+.confidentialityCondition {
+    padding: 2rem;
+    padding-top: 0;
+    color: $powerBlueColor;
+    text-align: justify;
+
+    .confidentialityCondition-title {
+        color: $celadonBlueColor;
+        text-shadow: 0px 0px 5px $blackColor;
+        font-family: $fontQuantum;
+        font-weight: lighter;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .confidentialityCondition-secondaryTitle {
+        color: $celadonBlueColor;
+    }
+}
+
+@media (max-width: 360px) {
+    
+    .confidentialityCondition {
+        padding: 1rem;
+        padding-top: 0;
+    }
+}
