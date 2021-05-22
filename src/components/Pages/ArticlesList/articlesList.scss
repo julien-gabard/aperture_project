@@ -1,6 +1,8 @@
 @import 'styles/_vars';
 
 .articlesList {
+    margin: auto;
+    max-width: 1350px;
 
     .articlesList-title {
         text-transform: uppercase;
@@ -24,16 +26,5 @@
         display: flex;
         justify-content: space-evenly;
         padding: 3rem 0;
-    }
-}
-
-@media (min-width: 1400px) {
-    
-    .articlesList {
-
-        .articlesList-list {
-            width: 1350px;
-            margin: auto;
-        }
     }
 }
