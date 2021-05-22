@@ -1,6 +1,6 @@
-# Aperture Project
+# Aperture Project (en cours de réalisation)
 
-Blog sur l'actualité numérique
+Blog permettant de lire des posts sur le numérique et de pouvoir commenter un post.
 
 ## Author
 
