@@ -37,7 +37,7 @@ const ArticleCard = ({
             </div>
             <div className="articleCard-content-button">
                 <Button name={'See'} onClick={handleClickButtonSee} choiseStyle={'option'}>
-                    Voire
+                    Voir l'article
                 </Button>
             </div>
         </div>
