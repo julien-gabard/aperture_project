@@ -50,12 +50,20 @@
         }
     }
 
-    .articleCard-content-button {
+    .articleCard-content-link {
         position: absolute;
         left: -25%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
         transition: all 200ms ease-in-out;
+
+        .articleCard-content-link-item {
+            text-decoration: none;
+            background-color: $greyColor;
+            color: $lightGreyColor;
+            padding: 1rem;
+            border-radius: 2rem;
+        }
     }
 
     &:hover {
@@ -65,7 +73,7 @@
             transition-delay: 0ms;
         }
 
-        .articleCard-content-button {
+        .articleCard-content-link {
             left: 50%;
             transition-delay: 200ms;
         }

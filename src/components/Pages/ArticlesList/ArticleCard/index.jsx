@@ -1,5 +1,5 @@
-import Button from 'components/Button';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import './articleCard.scss';
 
 const ArticleCard = ({
@@ -17,10 +17,6 @@ const ArticleCard = ({
         }
     )
 
-    const handleClickButtonSee = () => {
-        console.log('Button See');
-    }
-
     return (
         <div className="articleCard">
             <div className="articleCard-image">
@@ -35,10 +31,14 @@ const ArticleCard = ({
                     <span className="articleCard-content-details-infos"> {author}</span>
                 </p>
             </div>
-            <div className="articleCard-content-button">
-                <Button name={'See'} onClick={handleClickButtonSee} choiseStyle={'option'}>
-                    Voir l'article
-                </Button>
+            <div className="articleCard-content-link">
+                <NavLink
+                    exact
+                    to={`/article/${id}`}
+                    className="articleCard-content-link-item"
+                >
+                    Voire l'article
+                </NavLink>
             </div>
         </div>
     );

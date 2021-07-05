@@ -1,0 +1,22 @@
+@import 'styles/_vars';
+
+.article {
+    margin: 0 auto;
+
+    .article-title {
+        text-transform: uppercase;
+        font-family: $fontQuantum;
+        font-weight: lighter;
+        font-size: 2.5rem;
+        color: $celadonBlueColor;
+        text-shadow: 0px 0px 5px $blackColor;
+        text-align: center;
+    }
+
+    .article-content {
+        text-align: justify;
+        line-height: 2rem;
+        margin: 2rem;
+        color: $lightGreyColor;
+    }
+}

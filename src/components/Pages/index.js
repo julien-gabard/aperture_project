@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import ArticlesList from './ArticlesList';
+import Article from './Article';
 import ConfidentialityCondition from './ConfidentialityCondition';
 import Error404 from './Error404';
 import LegalNotice from './LegalNotice';
@@ -9,6 +10,9 @@ const Pages = () => (
   <Switch>
     <Route path="/" exact>
       <ArticlesList />
+    </Route>
+    <Route path="/article/:id" exact>
+      <Article />
     </Route>
     <Route path="/registration" exact>
       <LoginOrRegister register={true} />
