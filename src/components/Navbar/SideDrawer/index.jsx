@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './sideDrawer.scss';
 
-const SideDrawer = ({ openSideDrawer, handleClickItem }) => {
+const SideDrawer = ({ openSideDrawer, handleClickItem, isLogged }) => {
     useEffect(() => {
         if (openSideDrawer) {
             document.body.classList.add('drawerIsOpen');
@@ -25,22 +25,26 @@ const SideDrawer = ({ openSideDrawer, handleClickItem }) => {
             >
                 Liste d'articles
             </NavLink>
-            <NavLink
-                to="/registration"
-                className="SideDrawer-link"
-                activeClassName="selected"
-                onClick={handleClickItem}
-            >
-                S'inscrire
-            </NavLink>
-            <NavLink
-                to="/login"
-                className="SideDrawer-link"
-                activeClassName="selected"
-                onClick={handleClickItem}
-            >
-                Connexion
-            </NavLink>
+            {!isLogged &&
+                <>
+                    <NavLink
+                        to="/registration"
+                        className="SideDrawer-link"
+                        activeClassName="selected"
+                        onClick={handleClickItem}
+                    >
+                        S'inscrire
+                    </NavLink>
+                    <NavLink
+                        to="/login"
+                        className="SideDrawer-link"
+                        activeClassName="selected"
+                        onClick={handleClickItem}
+                    >
+                        Connexion
+                    </NavLink>
+                </>
+            }
             <NavLink
                 to="/Confidentiality_conditions"
                 className="SideDrawer-link other"
@@ -64,7 +68,8 @@ const SideDrawer = ({ openSideDrawer, handleClickItem }) => {
 
 SideDrawer.propTypes = {
     openSideDrawer: PropTypes.bool.isRequired,
-    handleClickItem: PropTypes.func.isRequired
+    handleClickItem: PropTypes.func.isRequired,
+    isLogged: PropTypes.bool.isRequired,
 }
 
 export default SideDrawer;

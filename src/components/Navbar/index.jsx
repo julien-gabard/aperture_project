@@ -38,20 +38,24 @@ const Navbar = ({ isLogged }) => {
                     >
                         Liste d'articles
                     </NavLink>
-                    <NavLink
-                        to="/registration"
-                        className="navbar-nav-item"
-                        activeClassName="selected"
-                    >
-                        S'inscrire
-                    </NavLink>
-                    <NavLink
-                        to="/login"
-                        className="navbar-nav-item"
-                        activeClassName="selected"
-                    >
-                        Connexion
-                    </NavLink>
+                    {!isLogged &&
+                        <>
+                            <NavLink
+                                to="/registration"
+                                className="navbar-nav-item"
+                                activeClassName="selected"
+                            >
+                                S'inscrire
+                            </NavLink>
+                            <NavLink
+                                to="/login"
+                                className="navbar-nav-item"
+                                activeClassName="selected"
+                            >
+                                Connexion
+                            </NavLink>
+                        </>
+                    }
                 </nav>
             }
             <form className="navbar-form">
@@ -75,7 +79,7 @@ const Navbar = ({ isLogged }) => {
             {windowWidthSize <= 768 && 
                 <>
                     <Burger handleClickBurger={displayDrawer} openSideDrawer={openSideDrawer} />
-                    <SideDrawer handleClickItem={displayDrawer} openSideDrawer={openSideDrawer} />
+                    <SideDrawer handleClickItem={displayDrawer} openSideDrawer={openSideDrawer} isLogged={isLogged} />
                 </>
             }
         </div>
