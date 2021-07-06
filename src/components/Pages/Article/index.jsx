@@ -1,12 +1,12 @@
-import data from 'data/articles';
+import PropTypes from 'prop-types';
 import { Redirect, useParams } from 'react-router-dom';
 import './article.scss';
 
-const Article = () => {
+const Article = ({ articles }) => {
 
     const { id } = useParams();
 
-    const articleFilter = data.filter(article => article.id === Number(id));
+    const articleFilter = articles.filter(article => article.id === Number(id));
 
     return (
         <>
@@ -22,6 +22,10 @@ const Article = () => {
             ) : <Redirect to="/error404" />}
         </>
     );
+}
+
+Article.propTypes = {
+    articles: PropTypes.array.isRequired,
 }
 
 export default Article;

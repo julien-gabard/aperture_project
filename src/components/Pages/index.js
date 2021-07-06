@@ -1,6 +1,6 @@
+import Article from 'containers/Pages/Article';
 import ArticlesList from 'containers/Pages/ArticlesList';
 import { Route, Switch } from 'react-router-dom';
-import Article from './Article';
 import ConfidentialityCondition from './ConfidentialityCondition';
 import Error404 from './Error404';
 import LegalNotice from './LegalNotice';
