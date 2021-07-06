@@ -38,24 +38,20 @@ const Navbar = ({ isLogged }) => {
                     >
                         Liste d'articles
                     </NavLink>
-                    {!isLogged &&
-                        <>
-                            <NavLink
-                                to="/registration"
-                                className="navbar-nav-item"
-                                activeClassName="selected"
-                            >
-                                S'inscrire
-                            </NavLink>
-                            <NavLink
-                                to="/login"
-                                className="navbar-nav-item"
-                                activeClassName="selected"
-                            >
-                                Connexion
-                            </NavLink>
-                        </>
-                    }
+                    <NavLink
+                        to={isLogged ? '/account' : '/registration'}
+                        className="navbar-nav-item"
+                        activeClassName="selected"
+                    >
+                        {isLogged ? 'Mon compte' : 'S\'inscrire'}
+                    </NavLink>
+                    <NavLink
+                        to={isLogged ? '/logout' : '/login'}
+                        className="navbar-nav-item"
+                        activeClassName="selected"
+                    >
+                        {isLogged ? 'Déconnexion' : 'Connexion'}
+                    </NavLink>
                 </nav>
             }
             <form className="navbar-form">
