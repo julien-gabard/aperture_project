@@ -1,6 +1,6 @@
 import LogoSimple from 'assets/resources/logo_simple.svg';
 import FormLogin from 'containers/Pages/LoginOrRegister/FormLogin';
-import FormRegister from 'containers/Pages/LoginOrRegister/FormRagister';
+import FormRegister from 'containers/Pages/LoginOrRegister/FormRegister';
 import { useTitle } from 'hooks/useTitle';
 import { NavLink } from 'react-router-dom';
 import './loginOrRegister.scss';
