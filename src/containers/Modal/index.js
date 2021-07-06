@@ -2,7 +2,7 @@ import Modal from 'components/Modal';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
-  // Nom de la props à remplire : donnée à récupérer dans le state
+  modalIsOpen: state.user.modalIsOpen,
 });
 
 const mapDispatchToProps = (dispatch) => ({

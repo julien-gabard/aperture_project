@@ -4,8 +4,11 @@ import './modal.scss';
 
 /**
  * En cours de développement
+ * Quand modalIsOpen est à true :
+ * 1 - J'ajoute show dans le className
+ * 2 - Je lance le timer pour ajouter hide dans le className après 5 / 10 secondes
  */
-const Modal = () => {
+const Modal = ({ modalIsOpen }) => {
 
     const handleClick = () => {
         const element = document.getElementsByClassName('modal')[0];
@@ -21,7 +24,7 @@ const Modal = () => {
         return () => {
             clearTimeout(timer);
         }
-    })
+    }, [modalIsOpen])
 
     return (
         <div className="modal">

@@ -11,6 +11,8 @@ const initialState = {
   userData: null,
   /** Indicates whether the user is logged in */
   isLogged: false,
+  /** Allows you to display the modal */
+  modalIsOpen: false,
 };
 
 const user = (state = initialState, action = {}) => {
