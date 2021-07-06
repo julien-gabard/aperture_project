@@ -2,7 +2,7 @@ import Modal from 'components/Modal';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
-  modalIsOpen: state.user.modalIsOpen,
+  showModal: state.user.showModal,
 });
 
 const mapDispatchToProps = (dispatch) => ({
