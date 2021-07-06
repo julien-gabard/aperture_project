@@ -2,12 +2,13 @@ import Search from 'assets/resources/search.svg';
 import { useScroll } from 'hooks/useScroll';
 import { useToggle } from 'hooks/useToggle';
 import { useWindowSize } from 'hooks/useWindowSize';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import Burger from './Burger';
 import './navbar.scss';
 import SideDrawer from './SideDrawer';
 
-const Navbar = () => {
+const Navbar = ({ isLogged }) => {
     const [openSideDrawer, setOpenSideDrawer] = useToggle();
     const { windowWidthSize } = useWindowSize();
     const { scroll } = useScroll({element: 226});
@@ -79,6 +80,10 @@ const Navbar = () => {
             }
         </div>
     );
+}
+
+Navbar.propTypes = {
+    isLogged: PropTypes.bool.isRequired,
 }
 
 export default Navbar;

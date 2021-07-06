@@ -1,7 +1,7 @@
 import Banner from 'components/Banner';
 import Footer from 'components/Footer';
 import Modal from 'components/Modal';
-import Navbar from 'components/Navbar';
+import Navbar from 'containers/Navbar';
 import Pages from 'components/Pages';
 import ScrollToTop from 'components/ScrollToTop';
 import { useWindowSize } from 'hooks/useWindowSize';
