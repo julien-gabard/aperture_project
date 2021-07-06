@@ -37,7 +37,7 @@ const ArticleCard = ({
                     to={`/article/${id}`}
                     className="articleCard-content-link-item"
                 >
-                    Voire l'article
+                    Voir l'article
                 </NavLink>
             </div>
         </div>
