@@ -5,11 +5,17 @@ import Navbar from 'components/Navbar';
 import Pages from 'components/Pages';
 import ScrollToTop from 'components/ScrollToTop';
 import { useWindowSize } from 'hooks/useWindowSize';
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import './app.scss';
 
 // == Component
-const App = () => {
+const App = ({ fetchArticles }) => {
   const { windowWidthSize } = useWindowSize();
+
+  useEffect(() => {
+    fetchArticles();
+  }, [fetchArticles])
 
   return (
     <div className="app">
@@ -26,5 +32,9 @@ const App = () => {
     </div>
   );
 }
+
+App.propTypes = {
+  fetchArticles: PropTypes.func.isRequired,
+};
 
 export default App;
