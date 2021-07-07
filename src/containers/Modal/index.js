@@ -1,6 +1,6 @@
 import Modal from 'components/Modal';
 import { connect } from 'react-redux';
-import { resetBooleanModal } from 'actions/modal.actions';
+import { resetShowModal } from 'actions/modal.actions';
 
 const mapStateToProps = (state) => ({
   showModal: state.modal.showModal,
@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  resetBooleanModal: () => {
-    dispatch(resetBooleanModal());
+  resetShowModal: () => {
+    dispatch(resetShowModal());
   }
 });
 

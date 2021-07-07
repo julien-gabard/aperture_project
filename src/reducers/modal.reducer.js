@@ -1,4 +1,4 @@
-import { RESET_BOOLEAN_MODAL } from 'actions/modal.actions';
+import { RESET_SHOW_MODAL } from 'actions/modal.actions';
 
 const initialState = {
   /** Allows you to display the modal */
@@ -9,7 +9,7 @@ const initialState = {
 
 const modal = (state = initialState, action = {}) => {
   switch (action.type) {
-    case RESET_BOOLEAN_MODAL: {
+    case RESET_SHOW_MODAL: {
       return {
         ...state,
         showModal: false,

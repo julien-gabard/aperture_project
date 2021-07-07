@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import './modal.scss';
 
-const Modal = ({ showModal, contentModal, resetBooleanModal }) => {
+const Modal = ({ showModal, contentModal, resetShowModal }) => {
 
     const changeClassListModal = () => {
         const element = document.getElementsByClassName('modal')[0];
@@ -13,14 +13,14 @@ const Modal = ({ showModal, contentModal, resetBooleanModal }) => {
 
     const handleClick = () => {
         changeClassListModal();
-        resetBooleanModal();
+        resetShowModal();
     }
 
     useEffect(() => {
         const timer = setTimeout(() => {
             if (showModal) {
                 changeClassListModal();
-                resetBooleanModal();
+                resetShowModal();
             }
         }, 5000);
 
@@ -47,7 +47,7 @@ const Modal = ({ showModal, contentModal, resetBooleanModal }) => {
 Modal.propTypes = {
     showModal: PropTypes.bool.isRequired,
     contentModal: PropTypes.string.isRequired,
-    resetBooleanModal: PropTypes.func.isRequired,
+    resetShowModal: PropTypes.func.isRequired,
 }
 
 export default Modal;
