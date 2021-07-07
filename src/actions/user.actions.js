@@ -13,8 +13,9 @@ export const logIn = () => ({
   type: LOG_IN,
 });
 
-export const saveUser = () => ({
+export const saveUser = (data) => ({
   type: SAVE_USER,
+  user: data,
 });
 
 export const register = () => ({

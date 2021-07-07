@@ -1,4 +1,4 @@
-import { CHANGE_FIELD } from 'actions/user.actions';
+import { CHANGE_FIELD, SAVE_USER } from 'actions/user.actions';
 
 const initialState = {
   /** Content of the field to enter email */
@@ -21,6 +21,15 @@ const user = (state = initialState, action = {}) => {
       return {
         ...state,
         [target]: action.newValue,
+      }
+    }
+    case SAVE_USER: {
+      return {
+        ...state,
+        email: '',
+        password: '',
+        userData: action.user,
+        isLogged: true,
       }
     }
     default: return state;
