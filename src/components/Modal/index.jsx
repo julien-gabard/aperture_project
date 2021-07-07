@@ -1,29 +1,53 @@
 import Cross from 'assets/resources/cross.svg';
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import './modal.scss';
 
-/**
- * En cours de développement
- * Quand modalIsOpen est à true :
- * 1 - J'ajoute show dans le className
- * 2 - Je lance le timer pour ajouter hide dans le className après 5 / 10 secondes
- */
-const Modal = ({ showModal }) => {
+const Modal = ({ showModal, contentModal, resetBooleanModal }) => {
 
-    const handleClick = () => {
-        console.log('close modal');
+    const changeClassListModal = () => {
+        const element = document.getElementsByClassName('modal')[0];
+        element.classList.remove('show');
+        element.classList.add('hide');
     }
 
+    const handleClick = () => {
+        changeClassListModal();
+        resetBooleanModal();
+    }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (showModal) {
+                changeClassListModal();
+                resetBooleanModal();
+            }
+        }, 5000);
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [showModal])
+
     return (
-        <div className="modal">
+        <div className={showModal ? 'modal show' : 'modal'}>
             <img
                 src={Cross}
                 alt="cross.svg"
                 className="modal-icon"
                 onClick={handleClick}
             />
-            <p className="modal-message">Message dans le modal</p>
+            <p className="modal-message">
+                {contentModal}
+            </p>
         </div>
     );
+}
+
+Modal.propTypes = {
+    showModal: PropTypes.bool.isRequired,
+    contentModal: PropTypes.string.isRequired,
+    resetBooleanModal: PropTypes.func.isRequired,
 }
 
 export default Modal;

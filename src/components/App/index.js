@@ -1,9 +1,9 @@
 import Banner from 'components/Banner';
 import Footer from 'components/Footer';
-import Modal from 'components/Modal';
-import Navbar from 'containers/Navbar';
 import Pages from 'components/Pages';
 import ScrollToTop from 'components/ScrollToTop';
+import Modal from 'containers/Modal';
+import Navbar from 'containers/Navbar';
 import { useWindowSize } from 'hooks/useWindowSize';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
