@@ -17,6 +17,12 @@ const Modal = ({ showModal, contentModal, resetShowModal }) => {
     }
 
     useEffect(() => {
+        if (showModal) {
+            const element = document.getElementsByClassName('modal')[0];
+            element.classList.remove('hide');
+            element.classList.add('show');
+        }
+
         const timer = setTimeout(() => {
             if (showModal) {
                 changeClassListModal();
@@ -27,10 +33,10 @@ const Modal = ({ showModal, contentModal, resetShowModal }) => {
         return () => {
             clearTimeout(timer);
         }
-    }, [showModal])
+    }, [showModal, resetShowModal])
 
     return (
-        <div className={showModal ? 'modal show' : 'modal'}>
+        <div className="modal">
             <img
                 src={Cross}
                 alt="cross.svg"
