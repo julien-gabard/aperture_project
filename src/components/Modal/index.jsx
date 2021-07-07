@@ -1,9 +1,11 @@
 import Cross from 'assets/resources/cross.svg';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import './modal.scss';
 
 const Modal = ({ showModal, contentModal, resetShowModal }) => {
+    const { pathname } = useLocation();
 
     const changeClassListModal = () => {
         const element = document.getElementsByClassName('modal')[0];
@@ -15,6 +17,13 @@ const Modal = ({ showModal, contentModal, resetShowModal }) => {
         changeClassListModal();
         resetShowModal();
     }
+
+    /** Allows to reset the modal at each url change */
+    useEffect(() => {
+        if (showModal) {
+            changeClassListModal();
+        }
+    }, [pathname, showModal])
 
     useEffect(() => {
         if (showModal) {
