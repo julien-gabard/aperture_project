@@ -11,12 +11,23 @@
         color: $celadonBlueColor;
         text-shadow: 0px 0px 5px $blackColor;
         text-align: center;
+        margin-top: 3rem;
     }
 
     .article-content {
         text-align: justify;
         line-height: 2rem;
-        margin: 2rem;
+        margin: 2rem 4rem;
         color: $lightGreyColor;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    .article {
+        
+        .article-content {
+            margin: 2rem;
+        }
     }
 }
