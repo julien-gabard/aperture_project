@@ -1,4 +1,4 @@
-import { RESET_SHOW_MODAL, SAVE_MESSAGE_MODAL } from 'actions/modal.actions';
+import { RESET_SHOW_MODAL } from 'actions/modal.actions';
 
 const initialState = {
   /** Allows you to display the modal */
@@ -13,13 +13,6 @@ const modal = (state = initialState, action = {}) => {
       return {
         ...state,
         showModal: false,
-      }
-    }
-    case SAVE_MESSAGE_MODAL: {
-      return {
-        ...state,
-        showModal: true,
-        contentModal: action.content,
       }
     }
     default: return state;

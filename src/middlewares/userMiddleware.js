@@ -1,5 +1,4 @@
 import { LOG_IN, saveUser, REGISTER } from 'actions/user.actions';
-import { saveMessageModal } from 'actions/modal.actions';
 
 const userMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
@@ -10,7 +9,6 @@ const userMiddleware = (store) => (next) => (action) => {
       };
 
       if (data.email === store.getState().user.email && data.password === store.getState().user.password) {
-        store.dispatch(saveMessageModal('Connexion réussit'));
         store.dispatch(saveUser(data));
       }
       
