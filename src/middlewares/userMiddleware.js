@@ -5,7 +5,8 @@ const userMiddleware = (store) => (next) => (action) => {
     case LOG_IN:
       const data = {
         email: 'admin@aperture.io',
-        password: 'TestAdmin01'
+        password: 'TestAdmin01',
+        username: 'Sharck'
       };
 
       if (data.email === store.getState().user.email && data.password === store.getState().user.password) {

@@ -1,4 +1,4 @@
-import Banner from 'components/Banner';
+import Banner from 'containers/Banner';
 import Footer from 'components/Footer';
 import ScrollToTop from 'components/ScrollToTop';
 import Modal from 'containers/Modal';
