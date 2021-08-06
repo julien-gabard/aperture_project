@@ -25,26 +25,22 @@ const SideDrawer = ({ openSideDrawer, handleClickItem, isLogged }) => {
             >
                 Liste d'articles
             </NavLink>
-            {!isLogged &&
-                <>
-                    <NavLink
-                        to="/registration"
-                        className="SideDrawer-link"
-                        activeClassName="selected"
-                        onClick={handleClickItem}
-                    >
-                        S'inscrire
-                    </NavLink>
-                    <NavLink
-                        to="/login"
-                        className="SideDrawer-link"
-                        activeClassName="selected"
-                        onClick={handleClickItem}
-                    >
-                        Connexion
-                    </NavLink>
-                </>
-            }
+            <NavLink
+                to={isLogged ? '/account' : '/registration'}
+                className="SideDrawer-link"
+                activeClassName="selected"
+                onClick={handleClickItem}
+            >
+                {isLogged ? 'Mon compte' : 'S\'inscrire'}
+            </NavLink>
+            <NavLink
+                to={isLogged ? '/logout' : '/login'}
+                className="SideDrawer-link"
+                activeClassName="selected"
+                onClick={handleClickItem}
+            >
+                {isLogged ? 'Déconnexion' : 'Connexion'}
+            </NavLink>
             <NavLink
                 to="/Confidentiality_conditions"
                 className="SideDrawer-link other"
