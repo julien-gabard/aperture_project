@@ -18,3 +18,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/**********************
+* Edite style scrollbar
+***********************/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $greyColor;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba($blackColor, 0.5);
+  background-color: $celadonBlueColor;
+  border-radius: 10px;
+}
